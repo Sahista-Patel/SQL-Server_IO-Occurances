@@ -1,8 +1,6 @@
 # SQL-Server_IO-Occurances
 This script will give I/O Ocuurances beyond threshold details for SQL Server. Gives the email alert as well as HTML file with the important detail for passed servers in server list.
 
-The Server Name, Process Status, Process Name, Display Name, Database Name, Recovery Model, Last Backup Date and Time, Last Full Backup Start Date, Last Full Backup End Date, Last Full Backup Size, Last Differential Backup Start Date, Last Differential Backup End Date, Last Differential Backup Size, Last Log Backup Start Date, Last Log Backup End Date, Last Log Backup Size, Days Since Last Backup all these details Server and Instancewise will be formatted in fine table. It will send an email, if scheduled then it is monitoring technique for Database backup status on bunch of servers.
-
 ## Prerequisites
 
 Windows OS - Powershell<br>
@@ -33,6 +31,7 @@ The output file path to (example) {$HTML = "Path\IO_Report.html"}<br>
 Set Email From (example) {$EmailFrom = “example@outlook.com”}<br>
 Set Email To (example) {$EmailTo = “example@outlook.com"}<br>
 Set Email Subject (example) {$Subject = “IO Occurrences”}<br>
+Set Threshold (example) {$threshold = 30}<br>
 Set SMTP Server Details (example) {<br> 
 $SMTPServer = “smtp.outlook.com” <br>
 $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587)<br>
